@@ -1,6 +1,7 @@
 import { ArrowDownRight, ArrowUpRight, ChevronDown, Mail, MapPin, Menu, MessageCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import { raianaPortraitDataUrl } from "./hero-asset";
+import { raianaLogoDataUrl } from "./logo-asset";
 
 const message = "Olá, Raiana. Conheci seu trabalho pelo site e gostaria de saber mais sobre a psicoterapia.";
 const whatsappUrl = `https://wa.me/5531987080657?text=${encodeURIComponent(message)}`;
@@ -24,7 +25,7 @@ export default function Home() {
   return <main>
     <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header className="site-header" aria-label="Navegação principal">
-      <a className="brand" href="#inicio" aria-label="Raiana Fernandes, início"><span>Raiana</span><span>Fernandes</span></a>
+      <a className="brand" href="#inicio" aria-label="Raiana Fernandes, início"><img src={raianaLogoDataUrl} alt="Raiana Fernandes Psicóloga" /></a>
       <nav className="desktop-nav" aria-label="Seções do site"><a href="#psicoterapia">Psicoterapia</a><a href="#fases">Fases da vida</a><a href="#contato">Contato</a></nav>
       <WhatsAppLink className="header-cta"><span>Agendar uma conversa</span><ArrowUpRight size={16} aria-hidden="true" /></WhatsAppLink>
       <details className="mobile-menu"><summary aria-label="Abrir menu"><Menu size={22} /></summary><nav aria-label="Menu móvel"><a href="#psicoterapia">Psicoterapia</a><a href="#fases">Fases da vida</a><a href="#contato">Contato</a></nav></details>
@@ -58,7 +59,7 @@ export default function Home() {
       <section className="final-cta" aria-labelledby="final-title"><div className="content-wrap"><p className="eyebrow">Um começo possível</p><h2 id="final-title">Talvez o primeiro passo não precise ser ter todas as respostas.</h2><p>Pode ser apenas começar uma conversa.</p><WhatsAppLink className="button button-light">Falar com Raiana <ArrowUpRight size={18} aria-hidden="true" /></WhatsAppLink></div></section>
     </div>
 
-    <footer className="site-footer content-wrap"><div className="footer-brand"><span>Raiana Fernandes</span><p>Psicoterapia para adolescentes, adultos e idosos.</p></div><div className="footer-links"><a href="https://www.instagram.com/psi.raianafernandes" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a><a href="mailto:raiana@raianafernandes.com.br"><Mail size={17} aria-hidden="true" /> E-mail</a></div><p className="copyright">© {new Date().getFullYear()} Raiana Fernandes</p></footer>
+    <footer className="site-footer content-wrap"><div className="footer-brand"><img src={raianaLogoDataUrl} alt="Raiana Fernandes Psicóloga" /><p>Psicoterapia para adolescentes, adultos e idosos.</p></div><div className="footer-links"><a href="https://www.instagram.com/psi.raianafernandes" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a><a href="mailto:raiana@raianafernandes.com.br"><Mail size={17} aria-hidden="true" /> E-mail</a></div><p className="copyright">© {new Date().getFullYear()} Raiana Fernandes</p></footer>
     <WhatsAppLink className="floating-whatsapp"><MessageCircle size={22} aria-hidden="true" /><span>WhatsApp</span></WhatsAppLink>
   </main>;
 }
